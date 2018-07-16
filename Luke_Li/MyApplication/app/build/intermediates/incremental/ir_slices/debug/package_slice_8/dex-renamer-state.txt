@@ -1,4 +1,4 @@
-#Mon Jul 16 15:48:19 PDT 2018
-base.0=/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/transforms/dexMerger/debug/93
+#Mon Jul 16 16:28:00 PDT 2018
+base.0=/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/transforms/dexMerger/debug/8
 path.0=classes.dex
 renamed.0=classes.dex
