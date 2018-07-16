@@ -1,0 +1,36 @@
+Release Plan
+
+Product Name: Smart Account
+Team Name:
+Release Name: Initial Product Development Plan
+Release Date: 7/2/18
+Revision Number: 1.0
+Revision Date: 7/2/2018
+
+Implementation of the Product:
+    Be able to record group balance, visualize data, and make predictions to future budget based on history information.
+
+User Stories:
+    Sprint 1
+        The operating system is easy to enter and understand.
+        Record the group account after group shopping
+        Calculate the personal account after group shopping
+        The UI has similar structure to Wechat
+        The system shows the early account first
+        There is a chart or list to record the spending by catalog
+    Sprint 2
+        Users could check the sum of their accounts in different cases: personal and 
+        group shopping
+        The UI should be clear
+        The UI should be efficient
+        The software could make predictions according to the former records
+    Sprint 3
+        
+
+Product Backlog:
+    Connecting the software with credit cards so that users could make payments through this system.
+    Making a catalog about necessary and unnecessary payments.
+    
+
+
+
