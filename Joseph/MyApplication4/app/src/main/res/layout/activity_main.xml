@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <Button
+        android:id="@+id/addRecordAddButton"
+        android:layout_width="81dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="240dp"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordNoteTextview"
+        tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/addRecordProjectSwitch"
+        android:layout_width="163dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:text="Switch to Project"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/ReturnButton" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordIncomeOutcomeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordProjectSwitch">
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="20dp"
+        android:text="Add Your New Record"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/addRecordProjectSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ReturnButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textColor="@android:color/holo_blue_dark" />
+
+    <Button
+        android:id="@+id/ReturnButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:shadowColor="@android:color/background_light"
+        android:text="←"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordProjectSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addRecordAmount"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="118dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:text="Put an amount"
+        app:layout_constraintBottom_toBottomOf="@+id/addRecordCurrencyButton"
+        app:layout_constraintEnd_toStartOf="@+id/addRecordCurrencyTextview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordIncomeOutcomeButton" />
+
+    <Button
+        android:id="@+id/addRecordCurrencyButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="$"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordDateTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addRecordAmount"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordCurrencyTextview" />
+
+    <TextView
+        android:id="@+id/addRecordCurrencyTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:text="Currency"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordCurrencyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addRecordAmount"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordIncomeOutcomeButton" />
+
+    <TextView
+        android:id="@+id/addRecordNoteTextview"
+        android:layout_width="135dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginRight="49dp"
+        android:layout_marginStart="49dp"
+        android:text="Note for this record"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordAddButton"
+        app:layout_constraintEnd_toEndOf="@+id/addRecordAddButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/addRecordDate"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordDate" />
+
+    <EditText
+        android:id="@+id/addRecordCategory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Category"
+        app:layout_constraintBottom_toBottomOf="@+id/addRecordCurrencyTextview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addRecordIncomeOutcomeButton"
+        app:layout_constraintTop_toTopOf="@+id/addRecordIncomeOutcomeButton" />
+
+    <EditText
+        android:id="@+id/addRecordNote"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="304dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Write your note here"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addRecordNoteTextview"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/addRecordIncomeOutcomeButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginStart="35dp"
+        android:text="Income"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordCurrencyTextview"
+        app:layout_constraintEnd_toStartOf="@+id/addRecordCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+
+    <TextView
+        android:id="@+id/addRecordDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:text="Please select the date"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordCurrencyButton" />
+
+    <RelativeLayout
+        android:id="@+id/addRecordDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/color2"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordNoteTextview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordDateTextView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/current_date"
+            android:textColor="@color/color4"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/currentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:textColor="@color/color5"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
