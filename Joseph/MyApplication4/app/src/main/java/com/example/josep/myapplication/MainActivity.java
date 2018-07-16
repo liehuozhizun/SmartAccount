@@ -28,27 +28,23 @@ import static java.lang.String.valueOf;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
 
-    // White the new history to the database
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference();
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        selectDate = (RelativeLayout) findViewById(R.id.addRecordDate);
+        selectDate = findViewById(R.id.addRecordDate);
         selectDate.setOnClickListener(this);
-        currentDate = (TextView) findViewById(R.id.currentDate);
+        currentDate = findViewById(R.id.currentDate);
         initDatePicker();
 
-        EditText amount = (EditText)findViewById(R.id.addRecordAmount);
+        EditText amount = findViewById(R.id.addRecordAmount);
         int year = 2017;
         int month = 5;
         int day = 2;
-        EditText category = (EditText)findViewById(R.id.addRecordCategory);
+        EditText category = findViewById(R.id.addRecordCategory);
         String currency = "USD";
-        EditText note = (EditText)findViewById(R.id.addRecordNote);
+        EditText note = findViewById(R.id.addRecordNote);
         String type = "outcome";
 
         writeNewHistory(
@@ -95,6 +91,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void writeNewHistory(int amount, int year, int month, int day,
                                  String category, String currency, String note, String type) {
         History history = new History(amount, year, month, day, category, currency, note, type);
+
+        // White the new history to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference();
 
         // Read the counter number from the database
         final int historyNumber=0;
