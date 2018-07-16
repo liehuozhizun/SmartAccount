@@ -15,6 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:padding="10dp"
             android:text="@string/cancle"
@@ -35,8 +36,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
             android:padding="10dp"
             android:text="@string/commit"
             android:textColor="@color/text1"
@@ -64,7 +67,7 @@
             android:paddingRight="20dp"
             android:paddingTop="15dp">
 
-            <com.liuwan.customdatepicker.widget.DatePickerView
+            <com.example.josep.myapplication.widget.DatePickerView
                 android:id="@+id/year_pv"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
@@ -79,7 +82,7 @@
                 android:textColor="@color/text2"
                 android:textSize="18sp" />
 
-            <com.liuwan.customdatepicker.widget.DatePickerView
+            <com.example.josep.myapplication.widget.DatePickerView
                 android:id="@+id/month_pv"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
@@ -94,7 +97,7 @@
                 android:textColor="@color/text2"
                 android:textSize="18sp" />
 
-            <com.liuwan.customdatepicker.widget.DatePickerView
+            <com.example.josep.myapplication.widget.DatePickerView
                 android:id="@+id/day_pv"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
