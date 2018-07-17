@@ -1,0 +1,4 @@
+已经完成了navigation bar
+home page是default page/main page
+剩下两个page为calendar&analysis(可改)
+更改页面内容直接在layout/blablafragment.xml里面更改就行
