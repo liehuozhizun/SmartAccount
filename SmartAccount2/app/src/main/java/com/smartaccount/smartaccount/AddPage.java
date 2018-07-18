@@ -36,8 +36,6 @@ public class AddPage extends AppCompatActivity{
     EditText editNote;
     ToggleButton editType;
 
-    static int historyNumber = 0;// initial history counter number; will be replaced by getting data func
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,11 +76,7 @@ public class AddPage extends AppCompatActivity{
         }
 
         History newHist = new History(amount, year, month, day, category, currency, note, addType);
-
-        String historyName = "history".concat(Integer.toString(historyNumber));
-        myRef.child(historyName).setValue(newHist);
-        historyNumber++;
-        myRef.child("counter").setValue(historyNumber);
+        myRef.push().setValue(newHist);
 
         startActivity(new Intent(AddPage.this,MainActivity.class));
     }
