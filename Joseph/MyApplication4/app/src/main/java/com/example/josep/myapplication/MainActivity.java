@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import android.util.Log;
 
 import static java.lang.String.valueOf;
 
@@ -31,30 +32,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+/*
         selectDate = findViewById(R.id.addRecordDate);
         selectDate.setOnClickListener(this);
         currentDate = findViewById(R.id.currentDate);
         initDatePicker();
-
-        EditText amount = findViewById(R.id.addRecordAmount);
+*/
+        //EditText amount = findViewById(R.id.addRecordAmount);
+        int amount = 11;
         int year = 2017;
         int month = 5;
         int day = 2;
-        EditText category = findViewById(R.id.addRecordCategory);
+        int hour = 1;
+        int minute = 1;
+        //EditText category = findViewById(R.id.addRecordCategory);
+        String category = "test";
         String currency = "USD";
-        EditText note = findViewById(R.id.addRecordNote);
+        //EditText note = findViewById(R.id.addRecordNote);
+        String note = "test";
         String type = "outcome";
 
         writeNewHistory(
-                Integer.valueOf(amount.getText().toString()).intValue(),
+                //Integer.valueOf(amount.getText().toString()).intValue(),
+                amount,
                 year,
                 month,
                 day,
-                category.getText().toString(),
+                hour,
+                minute,
+                //category.getText().toString(),
+                category,
                 currency,
-                note.getText().toString(),
+                //note.getText().toString(),
+                note,
                 type
         );
 
@@ -66,21 +77,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public int year;
         public int month;
         public int day;
+        public int hour;
+        public int minute;
         public String category;
         public String currency;
         public String note;
         public String type;
 
-        // Default constructor
-        public History(){
-        }
-
-        public History(int amount, int year, int month, int day,
+        public History(int amount, int year, int month, int day, int hour, int minute,
                        String category, String currency, String note, String type){
             this.amount = amount;
             this.year = year;
             this.month = month;
             this.day = day;
+            this.hour = hour;
+            this.minute = minute;
             this.category = category;
             this.currency = currency;
             this.note = note;
@@ -88,40 +99,64 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void writeNewHistory(int amount, int year, int month, int day,
+    public int historyNumber = 2;
+    public void writeNewHistory(int amount, int year, int month, int day, int hour, int minute,
                                  String category, String currency, String note, String type) {
-        History history = new History(amount, year, month, day, category, currency, note, type);
+        History history = new History(amount, year, month, day, hour, minute, category, currency, note, type);
 
         // White the new history to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference();
+        DatabaseReference myRef = database.getReference("user");
+        //DatabaseReference myRef_counter = database.getReference("user").child("counter");
 
+/*
+        // Read from the database
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                int value = dataSnapshot.getValue(int.class);
+                historyNumber.setValue();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+*/
+/*
         // Read the counter number from the database
-        final int historyNumber=0;
-        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        myRef_counter.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Post counter = dataSnapshot.getValue(Post.class);
-                int historyNumber = counter.counter +1 ;
+                Post post = dataSnapshot.getValue(Post.class);
+                historyNumber = post.getValue();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
         });
 
-        // White the new history into the database
-        String historyName = "history".concat(Integer.toString(historyNumber));
-        myRef.child("user").child("history2").setValue(history);
-        myRef.child("user").child("counter").setValue(historyNumber+1);
+        historyNumber++;
+*/        // White the new history into the database
+        //String historyName = "history".concat(Integer.toString(historyNumber));
+        myRef.child("history2").setValue(history);
+        //myRef_counter.setValue(historyNumber);
     }
+    //private static final String TAG = "PostDetailActivity";
 
     // Object for obtaining the historyNumber
     public static class Post{
         public int counter;
         public Post(int counter){
         }
+        public int getValue(){
+            return this.counter;
+        }
     }
-
 
 
     private RelativeLayout selectDate;

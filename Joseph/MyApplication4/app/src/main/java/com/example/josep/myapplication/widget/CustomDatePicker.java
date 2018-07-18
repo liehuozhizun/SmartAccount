@@ -20,7 +20,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 
-public class CustomDatePicker {
+public class  CustomDatePicker {
 
     /**
      * 定义结果回调接口
