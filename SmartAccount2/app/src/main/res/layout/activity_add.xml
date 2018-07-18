@@ -12,7 +12,8 @@
         android:layout_height="42dp"
         android:background="?attr/colorPrimary"
         android:gravity="center_vertical"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
 
     </RelativeLayout>
 
@@ -25,8 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addRecordNote"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordNote" />
 
     <Switch
         android:id="@+id/addRecordProjectSwitch"
@@ -52,6 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ReturnButton"
         app:layout_constraintTop_toTopOf="@+id/ReturnButton"
+        app:layout_constraintVertical_bias="1.0"
         tools:textColor="@android:color/holo_blue_dark" />
 
     <Button
@@ -193,7 +194,6 @@
             android:layout_width="132dp"
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
-            android:background="@null"
             android:gravity="center"
             android:text="Should be current date"
             android:textSize="15sp" />
@@ -202,7 +202,6 @@
             android:id="@+id/currentDate"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@null"
             android:gravity="center"
             android:paddingEnd="15dp"
             android:paddingStart="15dp"
