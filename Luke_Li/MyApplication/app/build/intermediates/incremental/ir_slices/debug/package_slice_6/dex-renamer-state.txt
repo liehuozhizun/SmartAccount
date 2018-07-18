@@ -1,4 +1,4 @@
-#Tue Jul 17 17:54:52 PDT 2018
-base.0=D\:\\~yli302\\SmartAccount\\Luke_Li\\MyApplication\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
+#Tue Jul 17 20:10:02 PDT 2018
+base.0=/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/transforms/dexMerger/debug/41
 path.0=classes.dex
 renamed.0=classes.dex
