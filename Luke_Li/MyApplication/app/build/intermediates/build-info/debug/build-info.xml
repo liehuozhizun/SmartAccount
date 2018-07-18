@@ -2,35 +2,70 @@
 <instant-run
     abi="x86"
     api-level="28"
-    build-mode="COLD"
+    build-mode="FULL"
     density="xxhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
     plugin-version="3.1.3"
-    timestamp="1531783633501"
+    timestamp="1531874225607"
     token="5758147488005557093"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1740" />
+        duration="30" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="586" />
+        duration="146" />
     <task
         name="verifier"
-        duration="185" />
+        duration="54" />
 
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
     <artifact
         location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
+    <artifact
+        location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1531783572793"
+        timestamp="1531874225607"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
@@ -39,13 +74,16 @@
             location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -54,13 +92,7 @@
             location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
@@ -69,17 +101,11 @@
             location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1531783633501"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
             location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/Luke/Desktop/SmartAccount/Luke_Li/MyApplication/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

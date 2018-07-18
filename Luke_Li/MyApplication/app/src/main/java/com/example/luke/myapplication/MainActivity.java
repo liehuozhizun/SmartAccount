@@ -1,5 +1,6 @@
 package com.example.luke.myapplication;
 
+import android.app.Fragment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.content.Intent;
@@ -17,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     private TextView mTextMessage;
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -27,25 +28,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView mShowValueText4;
     private TextView mShowValueText5;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText("Home");
-                    return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText("Dashboard");
-                    return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText("Notifications");
-                    return true;
-            }
-            return false;
-        }
-    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,11 +59,42 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(this);
+        loadFragment(new HomeFragment());
 
         initView();
+    }
+
+    private boolean loadFragment(Fragment fragment){
+        if (fragment!=null){
+            getFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container,fragment)
+                    .commit();
+
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        Fragment fragment = null;
+
+        switch (menuItem.getItemId()){
+            case R.id.navigation_home:
+                fragment= new HomeFragment();
+                break;
+            case R.id.navigation_dashboard:
+                fragment = new CalendarFragment();
+                break;
+            case R.id.navigation_notifications:
+                fragment = new AnalysisFragment();
+                break;
+        }
+        return loadFragment(fragment);
     }
 
     public void skip(View view){
