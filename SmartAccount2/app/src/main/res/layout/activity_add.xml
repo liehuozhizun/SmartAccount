@@ -23,6 +23,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="46dp"
         android:text="Add"
+        android:onClick="addSubmit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -134,6 +135,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Category"
+        android:selectAllOnFocus="true"
         app:layout_constraintBaseline_toBaselineOf="@+id/addRecordIncomeOutcomeButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/addRecordIncomeOutcomeButton" />
