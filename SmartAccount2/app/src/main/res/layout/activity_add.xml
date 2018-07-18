@@ -68,6 +68,7 @@
         android:shadowColor="@android:color/background_light"
         android:text="←"
         android:textStyle="bold"
+        android:onClick="jump_MainPage"
         app:layout_constraintBottom_toTopOf="@+id/addRecordProjectSwitch"
         app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,6 +87,7 @@
         android:ems="10"
         android:inputType="number|numberDecimal"
         android:text="Put an amount"
+        android:selectAllOnFocus="true"
         app:layout_constraintBottom_toBottomOf="@+id/addRecordDateTextView"
         app:layout_constraintEnd_toStartOf="@+id/addRecordCurrencyButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -148,21 +150,23 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Write your note here"
+        android:selectAllOnFocus="true"
         app:layout_constraintBottom_toTopOf="@+id/addRecordAddButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addRecordNoteTextview" />
 
-    <Button
+    <ToggleButton
         android:id="@+id/addRecordIncomeOutcomeButton"
-        android:layout_width="80dp"
-        android:layout_height="0dp"
+        android:layout_width="104dp"
+        android:layout_height="43dp"
         android:layout_marginBottom="25dp"
         android:layout_marginEnd="12dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="12dp"
         android:layout_marginStart="40dp"
-        android:text="Income"
+        android:textOff="Income"
+        android:textOn="Outcome"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/addRecordNoteTextview"
         app:layout_constraintEnd_toStartOf="@+id/addRecordCategory"
@@ -191,20 +195,31 @@
         app:layout_constraintTop_toBottomOf="@+id/addRecordDateTextView">
 
         <TextView
+            android:id="@+id/currentDate"
             android:layout_width="132dp"
             android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="38dp"
             android:gravity="center"
             android:text="Should be current date"
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/currentDate"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:paddingEnd="15dp"
             android:paddingStart="15dp"
             android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/setDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="63dp"
+            android:onClick="setDate"
+            android:text="Set Date" />
     </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>

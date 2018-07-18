@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         return loadFragment(fragment);
     }
 
-    public void jump(View view){
+    public void jump_AddPage(View view){
 
         startActivity(new Intent(MainActivity.this,AddPage.class));
 

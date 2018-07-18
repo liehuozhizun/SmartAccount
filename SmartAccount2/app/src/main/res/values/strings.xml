@@ -4,6 +4,4 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="default_history">Histroy</string>
-    <string name="title_analysis">Analysis</string>
-    <string name="title_calendar">Calendar</string>
 </resources>
