@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/addRecordAddButton"
+        android:layout_width="108dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="46dp"
+        android:text="Add"
+        android:onClick="addSubmit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordNote" />
+
+    <Switch
+        android:id="@+id/addRecordProjectSwitch"
+        android:layout_width="163dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:text="Switch to Project"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordCurrencyTextview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReturnButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Add Your New Record"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ReturnButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ReturnButton"
+        app:layout_constraintTop_toTopOf="@+id/ReturnButton"
+        app:layout_constraintVertical_bias="1.0"
+        tools:textColor="@android:color/holo_blue_dark" />
+
+    <Button
+        android:id="@+id/ReturnButton"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        android:shadowColor="@android:color/background_light"
+        android:text="←"
+        android:textStyle="bold"
+        android:onClick="jump_MainPage"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordProjectSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addRecordAmount"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:text="Put an amount"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toBottomOf="@+id/addRecordDateTextView"
+        app:layout_constraintEnd_toStartOf="@+id/addRecordCurrencyButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordProjectSwitch" />
+
+    <Button
+        android:id="@+id/addRecordCurrencyButton"
+        android:layout_width="61dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:text="$"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordDateTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addRecordAmount"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordCurrencyTextview" />
+
+    <TextView
+        android:id="@+id/addRecordCurrencyTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currency"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordCurrencyButton"
+        app:layout_constraintStart_toStartOf="@+id/addRecordCurrencyButton"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordProjectSwitch" />
+
+    <TextView
+        android:id="@+id/addRecordNoteTextview"
+        android:layout_width="135dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="7dp"
+        android:text="Note for this record"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordNote"
+        app:layout_constraintStart_toStartOf="@+id/addRecordNote"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordIncomeOutcomeButton" />
+
+    <EditText
+        android:id="@+id/addRecordCategory"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Category"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addRecordIncomeOutcomeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addRecordIncomeOutcomeButton" />
+
+    <EditText
+        android:id="@+id/addRecordNote"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginStart="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Write your note here"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordAddButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordNoteTextview" />
+
+    <ToggleButton
+        android:id="@+id/addRecordIncomeOutcomeButton"
+        android:layout_width="104dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginStart="40dp"
+        android:textOff="Income"
+        android:textOn="Outcome"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordNoteTextview"
+        app:layout_constraintEnd_toStartOf="@+id/addRecordCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordDate" />
+
+
+    <TextView
+        android:id="@+id/addRecordDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select the date"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordDate"
+        app:layout_constraintStart_toStartOf="@+id/addRecordAmount"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordCurrencyButton" />
+
+    <RelativeLayout
+        android:id="@+id/addRecordDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@+id/addRecordIncomeOutcomeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordDateTextView">
+
+        <TextView
+            android:id="@+id/currentDate"
+            android:layout_width="132dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="38dp"
+            android:gravity="center"
+            android:text="Should be current date"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/setDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="63dp"
+            android:onClick="setDate"
+            android:text="Set Date" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
