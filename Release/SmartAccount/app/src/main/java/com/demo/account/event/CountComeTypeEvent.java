@@ -2,7 +2,7 @@ package com.demo.account.event;
 
 public class CountComeTypeEvent {
 
-    private int type; // 收入或支出
+    private int type; // income/expense
 
     public CountComeTypeEvent(int type) {
         this.type = type;

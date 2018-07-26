@@ -15,11 +15,11 @@ public class CountEntity {
     private Long id;
 
     private String userName;
-    private Integer type;       // 类型
-    private Integer money;      // 金额
-    private Integer comeType;   // 收入 或者支出
-    private String note;        // 备注
-    private Date date;          // 日期
+    private Integer type;
+    private Integer money;
+    private Integer comeType;
+    private String note;
+    private Date date;
     @Generated(hash = 550987889)
     public CountEntity(Long id, String userName, Integer type, Integer money,
             Integer comeType, String note, Date date) {

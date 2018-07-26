@@ -223,14 +223,14 @@ public class CountFragment extends SupportFragment {
     }
 
     /**
-     * 初始化图表
+     * initialize the chart
      */
     private void initChart() {
         ChartUtils.initPieChart(this.pieChartView);
         this.pieChartView.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
             public void onValueSelected(Entry e, Highlight h) {
-                // 单独显示每个分类的统计情况
+                //show the detail of clicked type
                 PieEntry entry = (PieEntry) e;
                 float money = entry.getValue();
                 Integer type = (Integer) entry.getData();
